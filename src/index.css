@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Plus Jakarta Sans", "Helvetica Neue", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  /* Custom vibrant neon palette for EIPsInsight - Sophisticated Dark */
+  --color-cyber-blue: #0ea5e9;
+  --color-cyber-cyan: #22d3ee;
+  --color-cyber-purple: #8b5cf6;
+  --color-cyber-indigo: #6366f1;
+  --color-cyber-emerald: #10b981;
+  --color-cyber-dark: #050505;
+  --color-cyber-card: rgba(18, 18, 23, 0.8);
+  
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-spin-slow: spin 12s linear infinite;
+}
+
+/* Layering custom base utilities and glass elements */
+@layer utilities {
+  .glass-card {
+    background: rgba(18, 18, 23, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  }
+  
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .glass-card-hover:hover {
+    background: rgba(24, 24, 33, 0.9);
+    border-color: rgba(255, 255, 255, 0.14);
+    box-shadow: 0 12px 40px 0 rgba(34, 211, 238, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .neon-glow-cyan {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.15);
+  }
+
+  .neon-glow-purple {
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.15);
+  }
+
+  .cyber-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
+  }
+}
+
+/* Base body styles for Sophisticated Dark presentation */
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: #121217;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.4);
+}
+

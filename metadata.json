@@ -1,0 +1,6 @@
+{
+  "name": "EIPsInsight",
+  "description": "Ethereum EIP Analytics Platform measuring governance velocity, predicting status finalization, and identifying proposal bottlenecks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
